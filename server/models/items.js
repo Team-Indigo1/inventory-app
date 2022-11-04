@@ -3,6 +3,7 @@ const {sequelize} = require('../db')
 
 
 
+
 const allItems = sequelize.define('items', {
     name: Sequelize.STRING,
     description: Sequelize.STRING,
@@ -12,3 +13,5 @@ const allItems = sequelize.define('items', {
 
 
 })
+
+module.export = allItems;
