@@ -1,10 +1,7 @@
 const {Sequelize} = require('sequelize')
 const {sequelize} = require('../db')
 
-
-
-
-const allItems = sequelize.define('items', {
+const Items = sequelize.define('items', {
     name: Sequelize.STRING,
     description: Sequelize.STRING,
     price: Sequelize.INTEGER,
@@ -14,4 +11,4 @@ const allItems = sequelize.define('items', {
 
 })
 
-module.export = allItems;
+module.exports = {Items};
