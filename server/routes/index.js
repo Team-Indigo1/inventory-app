@@ -1,11 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-
-// we dont need to use this 
 // different model routers
 router.use('/sauces', require('./sauces'));
-
+router.use('/items', require('./items'));
 module.exports = router;
 
 
