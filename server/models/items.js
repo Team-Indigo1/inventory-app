@@ -1,14 +1,14 @@
-const {Sequelize} = require('sequelize')
-const {sequelize} = require('../db')
+// const {Sequelize} = require('sequelize')
+// const {sequelize} = require('../db')
 
-const Items = sequelize.define('items', {
-    name: Sequelize.STRING,
-    description: Sequelize.STRING,
-    price: Sequelize.INTEGER,
-    category: Sequelize.STRING,
-    image: Sequelize.STRING
+// const Items = sequelize.define('items', {
+//     name: Sequelize.STRING,
+//     description: Sequelize.STRING,
+//     price: Sequelize.INTEGER,
+//     category: Sequelize.STRING,
+//     image: Sequelize.STRING
 
 
-})
+// })
 
-module.exports = {Items};
+// module.exports = {Items};
