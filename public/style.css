@@ -11,3 +11,11 @@
   width: 30px;
   height: 10px;
 }
+
+.row > .col {
+  margin-top: "10px";
+}
+
+#description {
+  width: 300 px;
+}
