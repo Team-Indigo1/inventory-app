@@ -24,7 +24,6 @@ export const App = () => {
 	}
 
 	useEffect(() => {
-		fetchSauces();
 		getItems();
 	}, []);
 
@@ -34,14 +33,16 @@ export const App = () => {
 		<div className='jumbotron'>
 
 		</div>
-		<div className='inventory'>
+		{/* <div className='inventory'>
 			<div className='left'></div>
 			<div className='right'></div>
-		</div>
-      <h1>Sauce Store</h1>
-			<h2>All things 🔥</h2>
-			<Button>submit</Button>
+		</div> */}
+
+        <h1>GEM Inventory</h1>
+		<h2>All things 🔥</h2>
+		<div className="listContainer">
 			<ItemsList items={items}/>
+		</div>
 		</main>
 	)
 }

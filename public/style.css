@@ -1,5 +1,18 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  /* background-color: rgb(223, 223, 223); */
+}
+
+.listContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item > h3 {
+
+}
+
+.item > img {
+  height: 100px;
+  width: 100px;
 }
