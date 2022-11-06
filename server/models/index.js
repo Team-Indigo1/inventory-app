@@ -13,6 +13,7 @@ const Items = sequelize.define('items', {
   category: Sequelize.STRING,
   image: Sequelize.STRING
 })
+
 module.exports = {
   db: sequelize,
   Sauce,
