@@ -3,16 +3,11 @@
   box-sizing: border-box;
 }
 
-/* .listContainer {
-  display: flex;
-  flex-wrap: wrap;
-} */
-
-.item > h3 {
-
+.listContainer {
+  margin: 50px;
 }
 
-.item > img {
-  height: 100px;
-  width: 100px;
+.item > Button {
+  width: 30px;
+  height: 10px;
 }
