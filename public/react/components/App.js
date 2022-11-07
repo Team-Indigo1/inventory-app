@@ -38,10 +38,8 @@ export const App = () => {
 			<div className='right'></div>
 		</div> */}
 
-        <h1>GEM Inventory</h1>
-		<h2>All things 🔥</h2>
 		<div className="listContainer">
-			<ItemsList items={items}/>
+			<ItemsList items={items} setItems={setItems}/>
 		</div>
 		</main>
 	)
