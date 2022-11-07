@@ -12,10 +12,10 @@ const Items = sequelize.define('items', {
   price: Sequelize.INTEGER,
   category: Sequelize.STRING,
   image: Sequelize.STRING
-});
+})
 
 module.exports = {
   db: sequelize,
   Sauce,
-  Items
+  Items,
 };
