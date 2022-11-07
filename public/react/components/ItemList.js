@@ -4,6 +4,7 @@ import {Item} from './Item';
 import Button from 'react-bootstrap/Button';
 import Stack from 'react-bootstrap/Stack';
 import {AddItemModal} from './AddItemModal'
+import {UpdateForm} from './UpdateForm'
 
 export const ItemsList = ({items, setItems}) => {
 
@@ -43,10 +44,12 @@ export const ItemsList = ({items, setItems}) => {
 				<h6>{oneItem.description}</h6>
 				<h3>${oneItem.price}</h3>
 				<Button id="addToCartButton">Add to Cart</Button>
+				<UpdateForm/>
 			</div>
 			<Stack gap={2}>
 			<Button onClick={() => goBack()} style={{ width:'200px'}}>Go Back</Button>
 			<Button onClick={() => deleteItem(oneItem.id)} style={{ width:'200px'}}>Delete</Button>
+
 
         	</Stack>
 		  </div>

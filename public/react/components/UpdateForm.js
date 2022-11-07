@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import apiURL from '../api';
 
-export const AddItemModal = () => {
+export const UpdateForm = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
