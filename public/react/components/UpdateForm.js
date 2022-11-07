@@ -4,7 +4,8 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import apiURL from '../api';
 
-export const UpdateForm = () => {
+export const UpdateForm = ({oneItemid}) => {
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -16,11 +17,11 @@ export const UpdateForm = () => {
   const [category, setCategory] = useState('');
   const [image, setImage] = useState('');
   
-
+    console.log(oneItemid, "one item")
   const handleSubmit = async (e) => {
 		// e.preventDefault();
-		const response = await fetch(`${apiURL}/items`, {
-			method: "POST",
+		const response = await fetch(`${apiURL}/items/${oneItemid}`, {
+			method: "PUT",
 			headers: {
 				'Content-Type': 'application/json'
 			},
@@ -101,15 +102,16 @@ export const UpdateForm = () => {
                 value={image}
               />
             </Form.Group>
+            <Button type='submit' variant="primary">
+            Save Changes
+          </Button>
           </Form>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button type='submit' variant="primary">
-            Save Changes
-          </Button>
+         
         </Modal.Footer>
       </Modal>
     </>
