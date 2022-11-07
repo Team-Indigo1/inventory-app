@@ -11,6 +11,7 @@ export const App = () => {
 
 	const [items, setItems] = useState(null);
 	const [userEmail, setUserEmail] = useState({email:'sumbody@youKnow.com'});
+	const [cart, setCart] = useState({})
 
 	async function getItems() {
 		try {

@@ -40,12 +40,12 @@ export const AddItemModal = () => {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Add Item
+        Update Item
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Add New Item</Modal.Title>
+          <Modal.Title>Update Item</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
