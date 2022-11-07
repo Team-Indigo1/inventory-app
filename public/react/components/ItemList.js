@@ -27,6 +27,12 @@ export const ItemsList = ({items, setItems}) => {
 		}
 	  } 
 
+	  const deleteItem = async(slug) => {
+		const response = await fetch(`${apiURL}/items/${slug}`, {
+		method: "DELETE"
+		});
+		await response.json();
+	  }
 	return <div >
 		{oneItem ? 
 		<div class="container m10">
@@ -40,6 +46,8 @@ export const ItemsList = ({items, setItems}) => {
 			<Stack gap={2}>
 			<Button onClick={() => goBack()} style={{ width:'200px'}}>Go Back</Button>
 			<Button style={{ width:'200px'}}>Add to Cart</Button>
+			<Button onClick={() => deleteItem(oneItem.id)} style={{ width:'200px'}}>Delete</Button>
+
         	</Stack>
 		  </div>
 		  <div class="col" id="oneItemImg">
