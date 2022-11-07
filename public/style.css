@@ -1,6 +1,5 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
+body,html {
+  height: 100vh;
 }
 
 .listContainer {
@@ -12,10 +11,44 @@
   height: 10px;
 }
 
-.row > .col {
+/* .row > .col {
   margin-top: "10px";
-}
+} */
 
 #description {
   width: "300px";
+}
+
+.loginForm, .allOrSearch {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: "white";
+}
+
+.logContainer {
+  align-items: center;
+  background-color: rgb(27, 114, 229);
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.allOrSearch > .row > #left {
+  padding: 10%;
+  margin: 2rem;
+  background-color: rgb(255, 21, 0);
+  border-radius: 10px;
+  box-shadow: gray 10px 10px 20px;
+
+}
+
+.allOrSearch > .row > #right {
+  padding: 10%;
+  margin: 2rem;
+  background-color: rgb(255, 191, 0);
+  border-radius: 20px;
+  box-shadow: gray 10px 10px 20px;
 }
