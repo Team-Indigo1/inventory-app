@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { ItemsList } from './ItemList';
 import HomeNavbar from './HomeNavbar';
+
 import InputGroup from 'react-bootstrap/InputGroup';
 import { Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-
-// import and prepend the api url to any fetch calls
 import apiURL from '../api';
 
 export const App = () => {
@@ -44,7 +43,7 @@ export const App = () => {
 						<Button onClick={()=>{getItems()}}>Search All Items</Button>
 					</div>
 					<div className='col' id="right">
-					<InputGroup className="mb-3">
+					<InputGroup className="mb-3 w-100">
 						<h2>Search by Category</h2>
 						<Form.Control
 						placeholder="Search by Category"

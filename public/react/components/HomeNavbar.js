@@ -10,7 +10,7 @@ export default function HomeNavbar({userEmail}) {
           <Navbar.Brand href="#home">
             <img
               alt=""
-              src="https://w7.pngwing.com/pngs/1008/186/png-transparent-gemstone-jewellery-diamond-logo-gemstone-gemstone-blue-angle-thumbnail.png"
+              src="https://w7.pngwing.com/pngs/421/376/png-transparent-gemstone-bejeweled-diamond-computer-icons-blue-gem-gemstone-blue-angle.png"
               width="30"
               height="30"
               className="d-inline-block align-top"

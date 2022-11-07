@@ -37,18 +37,23 @@ body,html {
 }
 
 .allOrSearch > .row > #left {
-  padding: 10%;
-  margin: 2rem;
+  padding: 6%;
+  margin: 1rem;
   background-color: rgb(255, 21, 0);
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: gray 10px 10px 20px;
 
 }
 
 .allOrSearch > .row > #right {
-  padding: 10%;
-  margin: 2rem;
+  padding: 5%;
   background-color: rgb(255, 191, 0);
   border-radius: 20px;
   box-shadow: gray 10px 10px 20px;
+}
+
+.allOrSearch > .row > #left > button {
+  background-color: rgb(40, 185, 40);
+  border: none;
+  box-shadow: black 5px 5px 20px;
 }
