@@ -2,7 +2,9 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 
-export default function HomeNavbar({userEmail}) {
+export default function HomeNavbar({email}) {
+
+  console.log('user email from',email)
   return (
     <div>
       <Navbar bg="primary" variant="dark">
@@ -17,7 +19,7 @@ export default function HomeNavbar({userEmail}) {
             />{' '}
             G.E.M Inventory
           </Navbar.Brand>
-          <h2>{userEmail ? userEmail : ''}</h2>
+          <h2>{email ? email.email : 'noEmail'}</h2>
         </Container>
       </Navbar>
     </div>

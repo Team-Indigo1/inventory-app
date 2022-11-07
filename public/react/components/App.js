@@ -10,7 +10,7 @@ import apiURL from '../api';
 export const App = () => {
 
 	const [items, setItems] = useState(null);
-	const [userEmail, setUserEmail] = useState({email:'mzkidd5@gmail.com'});
+	const [userEmail, setUserEmail] = useState({email:'sumbody@youKnow.com'});
 
 	async function getItems() {
 		try {
@@ -27,10 +27,10 @@ export const App = () => {
 	// useEffect(() => {
 	// 	getItems();
 	// }, []);
-
+	console.log('current useremail', userEmail)
 	return (
 		<main>	
-			<HomeNavbar />
+			<HomeNavbar email={userEmail}/>
 			{ userEmail ?
 			<div > { items ? 
 				<div className="listContainer">

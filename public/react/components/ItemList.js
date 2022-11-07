@@ -29,7 +29,7 @@ export const ItemsList = ({items, setItems}) => {
 
 	return <div >
 		{oneItem ? 
-		<div class="container">
+		<div class="container m10">
 		<div class="row justify-content-md-center">
 		  <div class="col-5" >
 			<div id='description'>
@@ -42,13 +42,13 @@ export const ItemsList = ({items, setItems}) => {
 			<Button style={{ width:'200px'}}>Add to Cart</Button>
         	</Stack>
 		  </div>
-		  <div class="col">
-			<img src={oneItem.image} style={{ height:"400px", padding:"20px"}}/>
+		  <div class="col" id="oneItemImg">
+			<img src={oneItem.image} />
 		  </div>
 		</div>
 		</div>
 		:
-		<div className='d-flex flex-wrap justify-content-between'>
+		<div className='d-flex flex-wrap justify-content-between gap-2'>
 			<div className='w-100 mb-2'>
 			<AddItemModal/>
 			</div>
