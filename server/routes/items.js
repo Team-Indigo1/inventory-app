@@ -28,6 +28,7 @@ router.post("/", async (req,res) => {
 //update item
 
 router.put("/:id", async (req, res) => {
+    console.log("update from front end", req.body)
     await Items.update(req.body, {
         where: {
             id: req.params.id

@@ -14,6 +14,7 @@ const Items = sequelize.define('items', {
   image: Sequelize.STRING
 })
 
+//
 module.exports = {
   db: sequelize,
   Sauce,
