@@ -78,3 +78,13 @@ body,html {
   height: 350px;
   width: 350px;
 }
+
+#description > Button {
+  width:'150px';
+  background-color: rgb(20, 150, 52);
+  border: none;
+}
+
+#description > Button:hover {
+  background-color: rgb(14, 105, 161);
+}
