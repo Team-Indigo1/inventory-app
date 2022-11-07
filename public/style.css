@@ -4,6 +4,13 @@ body,html {
 
 .listContainer {
   margin: 50px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.listSection {
+  width: 75%;
 }
 
 .item > Button {

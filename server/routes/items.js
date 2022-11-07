@@ -19,7 +19,33 @@ router.get("/:id", async (req, res) => {
     const item = await Items.findByPk(req.params.id);
     res.json(item);
 })
+//add item
+router.post("/", async (req,res) => {
+    const itemtoAdd = await Items.create(req.body);
+    res.json(await Items.findAll());
+    })
+    
+//update item
 
-//delete 
+router.put("/:id", async (req, res) => {
+    await Items.update(req.body, {
+        where: {
+            id: req.params.id
+        }
+    })
+    res.json(await Items.findAll());
+})
+
+
+//delete item
+
+router.delete('/:id', async (req,res)=>{
+    await Items.destroy({
+        where:{
+            id: req.params.id
+        }
+    });
+    res.json(await Items.findAll())
+ })
 
 module.exports=router;

@@ -35,7 +35,9 @@ export const App = () => {
 			{ userEmail ?
 			<div > { items ? 
 				<div className="listContainer">
+					<div className='listSection'>
 					<ItemsList items={items} setItems={setItems}/>
+					</div>
 				</div>
 				:
 				<div className='allOrSearch'>
