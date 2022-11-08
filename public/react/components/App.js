@@ -13,7 +13,6 @@ export const App = () => {
 
 	const [items, setItems] = useState(null);
 	const [userEmail, setUserEmail] = useState('');
-	// localStorage.setItem("email", userEmail);
 	const newEmail = localStorage.getItem("email");
 
 	const [cart, setCart] = useState({})
