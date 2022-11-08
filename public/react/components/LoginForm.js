@@ -9,7 +9,9 @@ export default function LoginForm({setUserEmail}) {
 	const [password, setPassword] = useState('');
 
     const handleSubmit = async (e) => {
-        setUserEmail(email)
+        // setUserEmail(email)
+        localStorage.setItem("email", email);
+
 		const response = await fetch(`${apiURL}/users`, {
 			method: "POST",
 			headers: {

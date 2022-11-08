@@ -12,7 +12,9 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 export const App = () => {
 
 	const [items, setItems] = useState(null);
-	const [userEmail, setUserEmail] = useState('mzkidd5@gmai.com');
+	const [userEmail, setUserEmail] = useState('');
+	// localStorage.setItem("email", userEmail);
+	const newEmail = localStorage.getItem("email");
 
 	const [cart, setCart] = useState({})
 
@@ -28,11 +30,11 @@ export const App = () => {
 		}
 	}
 
-	console.log('current useremail', userEmail)
+	console.log('current useremail', newEmail)
 	return (
 		<main>	
-			<HomeNavbar email={userEmail}/>
-			{ userEmail ?
+			<HomeNavbar email={newEmail}/>
+			{newEmail ?
 			<div > { items ? 
 				<div className="listContainer">
 					<div className='listSection'>
