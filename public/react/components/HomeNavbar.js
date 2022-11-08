@@ -28,7 +28,7 @@ export default function HomeNavbar({email}) {
             />{' '}
             G.E.M Inventory
           </Navbar.Brand>
-          <h5>{email ? email : 'noEmail'}</h5>
+          <h5>{email ? email : ''}</h5>
           <Cart></Cart>
           { email ? 
              <Button 
