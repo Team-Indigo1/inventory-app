@@ -14,7 +14,6 @@ export const ItemsList = ({items, setItems}) => {
 		const res = await fetch(`${apiURL}/items/${id}`);
 		const data = await res.json();
 		setOneItem(data);
-		console.log("id from item", id)
 	}
 
 	const goBack = async() => {
@@ -34,24 +33,40 @@ export const ItemsList = ({items, setItems}) => {
 		});
 		await response.json();
 	  }
+
+	  const addToCart = async (id) => {
+		// e.preventDefault();		
+		const response = await fetch(`${apiURL}/cart`, {
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(
+				{
+					id:id
+				}
+			)
+		});
+		const data = await response.json();
+	}
 	return <div >
 		{oneItem ? 
-		<div class="container m10">
+		<div class="container">
 		<div class="row justify-content-md-center">
 		  <div class="col-5" >
 			<div id='description'>
 				<h2>Category: {oneItem.category}</h2>
 				<h6>{oneItem.description}</h6>
 				<h3>${oneItem.price}</h3>
-				
-				<Button id="addToCartButton">Add to Cart</Button>
-				
+				<div>
+				<Button onClick={()=>{addToCart(oneItem.id)}}id="addToCartButton">Add to Cart</Button>
+				<UpdateForm oneItemid = {oneItem.id}/>
+				</div>
+
 			</div>
 			<Stack gap={2}>
 			<Button onClick={() => goBack()} style={{ width:'200px'}}>Go Back</Button>
 			<Button onClick={() => deleteItem(oneItem.id)} style={{ width:'200px'}}>Delete</Button>
-			<UpdateForm oneItemid = {oneItem.id}/>
-
         	</Stack>
 		  </div>
 		  <div class="col" id="oneItemImg">
