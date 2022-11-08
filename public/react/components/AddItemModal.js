@@ -16,10 +16,11 @@ export const AddItemModal = () => {
   const [category, setCategory] = useState('');
   const [image, setImage] = useState('');
   
-
+console.log('apiurl', apiURL)
   const handleSubmit = async (e) => {
 		// e.preventDefault();
-		const response = await fetch(`${apiURL}/items`, {
+    // location.reload()
+		const response = await fetch(`${apiURL}/items/`, {
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json'
@@ -100,15 +101,16 @@ export const AddItemModal = () => {
                 value={image}
               />
             </Form.Group>
+            <Button type='submit' variant="primary">
+            Save Changes
+          </Button>
           </Form>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button type='submit' variant="primary">
-            Save Changes
-          </Button>
+         
         </Modal.Footer>
       </Modal>
     </>

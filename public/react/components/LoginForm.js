@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import apiURL from '../api';
 
-export default function LoginForm({setUserEmail, userEmail, userPassword, setUserPassword}) {
+export default function LoginForm({setUserEmail}) {
     const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
@@ -17,8 +17,8 @@ export default function LoginForm({setUserEmail, userEmail, userPassword, setUse
 			},
 			body: JSON.stringify(
 				{
-					email: userEmail,
-                    password: userPassword
+					email: email,
+                    password: password
 				}
 			)
 		});

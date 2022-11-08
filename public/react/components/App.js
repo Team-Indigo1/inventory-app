@@ -12,7 +12,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 export const App = () => {
 
 	const [items, setItems] = useState(null);
-	const [userEmail, setUserEmail] = useState('');
+	const [userEmail, setUserEmail] = useState('mzkidd5@gmai.com');
 
 	const [cart, setCart] = useState({})
 
