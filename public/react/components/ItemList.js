@@ -34,6 +34,22 @@ export const ItemsList = ({items, setItems}) => {
 		});
 		await response.json();
 	  }
+
+	  const addToCart = async (id) => {
+		// e.preventDefault();		
+		const response = await fetch(`${apiURL}/cart`, {
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(
+				{
+					id:id
+				}
+			)
+		});
+		const data = await response.json();
+	}
 	return <div >
 		{oneItem ? 
 		<div class="container m10">
@@ -44,7 +60,7 @@ export const ItemsList = ({items, setItems}) => {
 				<h6>{oneItem.description}</h6>
 				<h3>${oneItem.price}</h3>
 				
-				<Button id="addToCartButton">Add to Cart</Button>
+				<Button onClick={()=>{addToCart(oneItem.id)}}id="addToCartButton">Add to Cart</Button>
 				<UpdateForm oneItemid = {oneItem.id}/>
 
 			</div>

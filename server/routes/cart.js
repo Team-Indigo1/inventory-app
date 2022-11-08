@@ -26,6 +26,7 @@ router.post("/", async (req,res) => {
     const item = await Items.findByPk(req.body.id);
     console.log("hey",item)
     await cart.addItems(item)
+    console.log('added', item)
     res.json(item);
     })
 
