@@ -45,12 +45,12 @@ export const ItemsList = ({items, setItems}) => {
 				<h3>${oneItem.price}</h3>
 				
 				<Button id="addToCartButton">Add to Cart</Button>
-				
+				<UpdateForm oneItemid = {oneItem.id}/>
+
 			</div>
 			<Stack gap={2}>
 			<Button onClick={() => goBack()} style={{ width:'200px'}}>Go Back</Button>
 			<Button onClick={() => deleteItem(oneItem.id)} style={{ width:'200px'}}>Delete</Button>
-			<UpdateForm oneItemid = {oneItem.id}/>
 
         	</Stack>
 		  </div>
