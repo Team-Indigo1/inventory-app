@@ -8,7 +8,6 @@ const handleClick = async (e) => {
    
 }
 
-
 const Cart = () => {
     return(
         <Button variant="primary" onClick ={handleClick} >

@@ -42,7 +42,6 @@ export const AddItemModal = () => {
       <Button variant="primary" onClick={handleShow}>
         Add Item
       </Button>
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Add New Item</Modal.Title>

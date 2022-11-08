@@ -15,7 +15,6 @@ router.get("/", async (req, res) => {
         include: [{model: Items}]
     });
     res.json(cart);
-    console.log("this is", cart)
 })
 
 
@@ -24,9 +23,7 @@ router.post("/", async (req,res) => {
     // const itemtoAdd = await Items.create(req.body);
     const cart = await Cart.findByPk(1);
     const item = await Items.findByPk(req.body.id);
-    console.log("hey",item)
     await cart.addItems(item)
-    console.log('added', item)
     res.json(item);
     })
 

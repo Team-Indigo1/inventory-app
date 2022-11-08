@@ -22,11 +22,13 @@ const Users = sequelize.define('users', {
 const Cart = sequelize.define('cart', {
   total: Sequelize.INTEGER,
   
-})
+});
 
 //item to cart association
-Cart.hasMany(Items)
-Items.belongsTo(Cart)
+Users.hasOne(Cart);
+Cart.belongsTo(Users);
+Cart.hasMany(Items);
+Items.belongsTo(Cart);
 //Users.hasOne(Cart)
 
 module.exports = {
