@@ -1,6 +1,10 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
+import icon from '../img/cart4.svg'
+
+
 
 export default function HomeNavbar({email}) {
 
@@ -20,6 +24,9 @@ export default function HomeNavbar({email}) {
             G.E.M Inventory
           </Navbar.Brand>
           <h2>{email ? email.email : 'noEmail'}</h2>
+          <Button variant="primary" >
+            <img src={icon} alt="" width="32" height="32"></img>
+          </Button>
         </Container>
       </Navbar>
     </div>

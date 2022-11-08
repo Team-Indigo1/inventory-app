@@ -14,9 +14,20 @@ const Items = sequelize.define('items', {
   image: Sequelize.STRING
 })
 
-//
+const Users = sequelize.define('users', {
+  name: Sequelize.STRING,
+  password: Sequelize.STRING
+})
+
+// const Cart = sequelize.define('cart', {
+//   name: Sequelize.STRING,
+//   password: Sequelize.STRING
+// })
+
+
 module.exports = {
   db: sequelize,
   Sauce,
   Items,
+  Users
 };
