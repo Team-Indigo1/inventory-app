@@ -14,9 +14,27 @@ React Fullstack Inventory App
 Deployed link:
 Access my site at https://inventory-app-production-8415.up.railway.app/
 
+
+
 Table of Content:
 About The App
 Screenshots
+Login Page
+![image](https://user-images.githubusercontent.com/62623946/200701105-c2b87e83-46d8-4eba-9c9e-095e0896b8ba.png)
+Search Items
+![image](https://user-images.githubusercontent.com/62623946/200701260-dbaffef6-685b-4045-a4dc-540a631a85d8.png)
+View All Items
+![image](https://user-images.githubusercontent.com/62623946/200701299-38b78ee3-f95f-4452-8066-062ed55828b4.png)
+Add Item
+![image](https://user-images.githubusercontent.com/62623946/200701354-471d38c5-de03-4283-8e5c-3bec2b8e5f5f.png)
+Item Description, Add To Cart
+![image](https://user-images.githubusercontent.com/62623946/200701418-26f65115-5dd5-48ae-9b92-50b424bd55f6.png)
+Category Dropdown Meny
+![image](https://user-images.githubusercontent.com/62623946/200701590-9e4ebc63-e10a-41dc-9f56-ac25e5885c31.png)
+Update Item Form
+![image](https://user-images.githubusercontent.com/62623946/200701869-45fb1f59-89de-47da-9cef-bd565f90297c.png)
+
+
 Technologies
 Setup
 Approach
