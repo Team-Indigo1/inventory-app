@@ -19,15 +19,18 @@ const Users = sequelize.define('users', {
   password: Sequelize.STRING
 })
 
-// const Cart = sequelize.define('cart', {
-//   name: Sequelize.STRING,
-//   password: Sequelize.STRING
-// })
+const Cart = sequelize.define('cart', {
+  total: Sequelize.INTEGER,
+})
 
+//item to cart association
+Cart.hasMany(Items)
+//Users.hasOne(Cart)
 
 module.exports = {
   db: sequelize,
   Sauce,
   Items,
-  Users
+  Users,
+  Cart
 };
