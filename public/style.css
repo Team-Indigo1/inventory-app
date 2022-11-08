@@ -3,9 +3,10 @@ body,html {
 }
 
 .listContainer {
-  margin: 50px;
+  margin: 3%;
   display: flex;
   justify-content: center;
+
 
 }
 
@@ -43,6 +44,15 @@ body,html {
   background-color: "white";
 }
 
+.allOrSearch {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: "white";
+}
+
 .logContainer {
   align-items: center;
   background-color: rgb(27, 114, 229);
@@ -52,38 +62,43 @@ body,html {
 }
 
 .allOrSearch > .row > #left {
-  padding: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
-  background-color: rgb(255, 21, 0);
+  background-color: rgb(27, 114, 229);
   border-radius: 20px;
   box-shadow: gray 10px 10px 20px;
 
 }
 
 .allOrSearch > .row > #right {
+  display: flex;
   padding: 5%;
-  background-color: rgb(255, 191, 0);
+  background-color: rgb(27, 114, 229);
   border-radius: 20px;
   box-shadow: gray 10px 10px 20px;
 }
 
 .allOrSearch > .row > #left > button {
-  background-color: rgb(40, 185, 40);
+  background-color: orange;
   border: none;
   box-shadow: rgb(150, 31, 31) 5px 5px 10px;
 }
 
 #oneItemImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   box-shadow: gray 10px 10px 30px;
   border-radius: 20px;
-  padding: 10%;
-  padding-left: 13%;
+ 
 }
 
 #oneItemImg > img {
-  height: 350px;
-  width: 350px;
+  height: 300px;
+  width: 300px;
 }
 
 #description > Button {
