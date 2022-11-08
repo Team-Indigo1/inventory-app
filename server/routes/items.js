@@ -21,6 +21,8 @@ router.get("/:id", async (req, res) => {
 })
 //add item
 router.post("/", async (req,res) => {
+
+    console.log('added item', req.body )
     const itemtoAdd = await Items.create(req.body);
     res.json(await Items.findAll());
     })
