@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { ItemsList } from './ItemList';
 import HomeNavbar from './HomeNavbar';
-
+import LoginForm from './LoginForm';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import apiURL from '../api';
 
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 export const App = () => {
 
 	const [items, setItems] = useState(null);
-	const [userEmail, setUserEmail] = useState({email:'sumbody@youKnow.com'});
+	const [userEmail, setUserEmail] = useState('mzkidd5@gmai.com');
+
 	const [cart, setCart] = useState({})
 
 	async function getItems() {
@@ -25,9 +28,6 @@ export const App = () => {
 		}
 	}
 
-	// useEffect(() => {
-	// 	getItems();
-	// }, []);
 	console.log('current useremail', userEmail)
 	return (
 		<main>	
@@ -47,15 +47,25 @@ export const App = () => {
 					</div>
 					<div className='col' id="right">
 					<InputGroup className="mb-3 w-100">
-						<h2>Search by Category</h2>
-						<Form.Control
-						placeholder="Search by Category"
-						aria-label="Search by Category"
-						aria-describedby="basic-addon2"
-						/>
-						<Button variant="outline-secondary" id="button-addon2">
-						Search
-						</Button>
+						<h5>Search by Category</h5>
+						<div>
+						<InputGroup className="mb-3">
+							<Form.Control aria-label="Text input with dropdown button" />
+
+							<DropdownButton
+							variant="outline-secondary"
+							title="Category"
+							id="input-group-dropdown-2"
+							align="end"
+							>
+							<Dropdown.Item href="#">Men's Clothing</Dropdown.Item>
+							<Dropdown.Item href="#">Women's Clothing</Dropdown.Item>
+							<Dropdown.Item href="#">jewelery</Dropdown.Item>
+							{/* <Dropdown.Divider /> */}
+							<Dropdown.Item href="#">electronics</Dropdown.Item>
+							</DropdownButton>
+						</InputGroup>
+						</div>	
 					</InputGroup>
 					</div>
 				</div>
@@ -67,36 +77,12 @@ export const App = () => {
 				<div className='logContainer'>
 				<div className='row'>
 				<div className='col'>
-				<Form>
-				<Form.Group className="mb-3" controlId="formBasicEmail">
-					<Form.Label>Email address</Form.Label>
-					<Form.Control type="email" placeholder="Enter email" />
-					<Form.Text className="text-muted">
-					We'll never share your email with anyone else.
-					</Form.Text>
-				</Form.Group>
-
-				<Form.Group className="mb-3" controlId="formBasicPassword">
-					<Form.Label>Password</Form.Label>
-					<Form.Control type="password" placeholder="Password" />
-				</Form.Group>
-				<Form.Group className="mb-3" controlId="formBasicCheckbox">
-					<Form.Check type="checkbox" label="Check me out" />
-				</Form.Group>
-				<Button variant="primary" type="submit">
-					Submit
-				</Button>
-				</Form>
+				<LoginForm setUserEmail={setUserEmail} userEmail={userEmail} />
+				</div>
+				</div>
 				</div>
 			</div>
-				</div>
-				
-			</div>
-			
-			}
-		
-
-		
+			}	
 		</main>
 	)
 }
