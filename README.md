@@ -31,9 +31,7 @@ Inventory App is an app that my team built as developers for an e-commerce compa
 
 
 Screenshots
-Home Screen
-image.png
-image.png
+
 
 
 
