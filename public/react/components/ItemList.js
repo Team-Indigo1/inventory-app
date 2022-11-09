@@ -28,6 +28,7 @@ export const ItemsList = ({items, setItems}) => {
 	  } 
 
 	  const deleteItem = async(slug) => {
+		location.reload()
 		const response = await fetch(`${apiURL}/items/${slug}`, {
 		method: "DELETE"
 		});
