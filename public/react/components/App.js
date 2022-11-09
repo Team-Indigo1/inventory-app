@@ -54,7 +54,7 @@ export const App = () => {
 							<Form.Control aria-label="Text input with dropdown button" />
 
 							<DropdownButton
-							variant="outline-secondary"
+							variant="outline-light"
 							title="Category"
 							id="input-group-dropdown-2"
 							align="end"

@@ -36,7 +36,7 @@ export default function LoginForm({setUserEmail}) {
                 value={email} 
                 type="email" 
                 placeholder="Enter email" />
-                <Form.Text className="text-muted">
+                <Form.Text className="" style={{color:"whitesmoke"}}>
                 We'll never share your email with anyone else.
                 </Form.Text>
             </Form.Group>
