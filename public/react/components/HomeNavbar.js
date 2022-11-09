@@ -9,6 +9,10 @@ import Cart from "./Cart";
 
 export default function HomeNavbar({email}) {
 
+  const logOut = () => {
+    location.reload()
+    localStorage.removeItem("email");
+  }
   console.log('user email from',email)
   return (
     <div>
@@ -24,8 +28,16 @@ export default function HomeNavbar({email}) {
             />{' '}
             G.E.M Inventory
           </Navbar.Brand>
-          <h5>{email ? email : 'noEmail'}</h5>
+          <h5>{email ? email : ''}</h5>
           <Cart></Cart>
+          { email ? 
+             <Button 
+             onClick={()=> {logOut()}}
+             >Log Out</Button> 
+             :
+             ""
+          }
+         
         </Container>
       </Navbar>
     </div>

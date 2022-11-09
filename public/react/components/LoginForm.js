@@ -9,7 +9,9 @@ export default function LoginForm({setUserEmail}) {
 	const [password, setPassword] = useState('');
 
     const handleSubmit = async (e) => {
-        setUserEmail(email)
+        // setUserEmail(email)
+        localStorage.setItem("email", email);
+
 		const response = await fetch(`${apiURL}/users`, {
 			method: "POST",
 			headers: {
@@ -34,7 +36,7 @@ export default function LoginForm({setUserEmail}) {
                 value={email} 
                 type="email" 
                 placeholder="Enter email" />
-                <Form.Text className="text-muted">
+                <Form.Text className="" style={{color:"whitesmoke"}}>
                 We'll never share your email with anyone else.
                 </Form.Text>
             </Form.Group>
